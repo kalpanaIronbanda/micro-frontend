@@ -9,7 +9,7 @@ pipeline {
           def imageTag = "reactjs-${BUILD_NUMBER}"
 
           // Build the Docker image
-          sh "docker build -t ${imageName}:${imageTag} backend"
+          sh "docker build -t ${imageName}:${imageTag} frontend"
 
         }
       }
