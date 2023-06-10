@@ -6,7 +6,8 @@
 FROM node:alpine AS build_stage
 WORKDIR '/app'
 COPY package.json .
-RUN npm install
+RUN chmod -R 755 *
+RUN npm ci
 COPY . .
 RUN npm run build
 
