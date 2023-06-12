@@ -7,6 +7,7 @@ FROM node:alpine AS build_stage
 WORKDIR '/app'
 COPY package.json .
 RUN npm install
+RUN npm install axios
 COPY . .
 RUN npm run build
 
